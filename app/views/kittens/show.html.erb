@@ -2,3 +2,6 @@
 <div><%= @kitten.age %></div>
 <div><%= @kitten.cuteness %></div>
 <div><%= @kitten.softness %></div>
+<%= link_to "Destroy", article_path(@article), data: { turbo_method: :delete,
+                                                         turbo_confirm: "Are you sure?"
+                                                       } %>
