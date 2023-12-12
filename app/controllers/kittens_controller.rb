@@ -21,7 +21,7 @@ class KittensController < ApplicationController
         if @kitten.save
             redirect_to root_path, status: :see_other
         else
-            redirect_to :new, status: :unprocessable_entity
+            render :new, status: :unprocessable_entity
         end
     end
 
