@@ -2,11 +2,12 @@
 <% @kittens.each do |k| %>
   <ul>
   <li><%= k.name %></li>
-  <div><%= k.name %></div>
+  <div><%= k.age %></div>
   <div><%= k.cuteness %></div>
   <div><%= k.softness %></div>
-  <%= link_to "Destroy", article_path(@article), data: { turbo_method: :delete,
+  <%= link_to "Destroy", kitten_path(k), data: { turbo_method: :delete,
                                                          turbo_confirm: "Are you sure?"
                                                        } %>
   </ul>
 <% end %>
+<div><%= link_to "Create kitten", new_kitten_path %></div>
