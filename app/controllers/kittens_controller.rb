@@ -19,7 +19,7 @@ class KittensController < ApplicationController
         @kitten = Kitten.new(kitten_params)
 
         if @kitten.save
-            redirect_to root_path, status: :see_other
+            redirect_to root_path, status: :see_other, notice: "Congratulations! You created a kitten."
         else
             render :new, status: :unprocessable_entity
         end
