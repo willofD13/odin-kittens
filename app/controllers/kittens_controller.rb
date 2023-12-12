@@ -39,7 +39,7 @@ class KittensController < ApplicationController
         @kitten = Kitten.find(params[:id])
         @kitten.destroy
 
-        redirect_to root_path, status: :see_other
+        redirect_to root_path, status: :see_other, notice: "You destroyed a kitten."
     end
 
     private
