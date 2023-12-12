@@ -2,6 +2,9 @@
     <div>
         <%= f.label :name %><br>
         <%= f.text_field :name %>
+        <% kitten.errors.full_messages_for(:name).each do |m|%>
+            <div><%= m %></div>
+        <% end %>
     </div>
     <div>
         <%= f.label :age %><br>
@@ -10,10 +13,16 @@
     <div>
         <%= f.label :cuteness %><br>
         <%= f.number_field :cuteness %>
+        <% kitten.errors.full_messages_for(:cuteness).each do |m|%>
+            <div><%= m %></div>
+        <% end %>
     </div>
     <div>
         <%= f.label :softness %><br>
         <%= f.number_field :softness %>
+        <% kitten.errors.full_messages_for(:softness).each do |m|%>
+            <div><%= m %></div>
+        <% end %>
     </div>
     <div>
         <%= f.submit "Submit" %>
